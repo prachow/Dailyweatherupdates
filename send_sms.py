@@ -15,8 +15,8 @@ def send_sms(phone_number, message):
     client = Client(account_sid, auth_token)
     message = client.messages \
         .create(
-             body='This is another message',
+             body=message,
              from_='+12015818325',
-             to='+917798487388'
+             to=phone_number
          )
     print(message)
